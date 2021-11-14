@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TB Dino Game</title>
+    <style>
+
+        body{
+            overflow: hidden;
+        }
+
+        .main-heading{
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 2vh;
+            color: red;
+            font-family: 'cascadia code',serif;
+        }
+
+        .trackImage{
+            position: absolute;
+            width: 99vw;
+            top: 58%;
+            left: 0%;
+        }
+        
+        .dinoImage{
+            position: absolute;
+            top: 46%;
+            left: 10%;
+            transition: all 0.2s ease;
+        }
+
+        #obstacle{
+            position:absolute;
+            transition: all 1s ease;
+        }
+
+        .moveObstacleClass{
+            animation: moveObstacleAnimation 3s linear infinite;
+        }
+
+        #score{
+            position: absolute;
+            top: 2%;
+            right: 5%;
+            color: red;
+            font-size: 3rem;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        @keyframes moveObstacleAnimation{
+            0%{
+                left: 100vw;
+            }
+            100%{
+                left: -10vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 class="main-heading">Welcome to TB Dino Game</h1>
+    <img src="static/img/Dino/DinoJump.png" alt="" class="dinoImage">
+    <img src="static/img/Other/Track.png" alt="" class="trackImage">
+    <div class="cloud-div"></div>
+    <div class="obstacle-div">
+        <img src="static/img/Cactus/LargeCactus1.png" id="obstacle" class="moveObstacleClass" style="top: 46%;" alt="">
+    </div>
+    <div id="score">
+        Score: 0
+    </div>
+</body>
+<script src="js/app.js"></script>
+</html>
